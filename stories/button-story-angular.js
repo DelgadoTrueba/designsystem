@@ -1,14 +1,13 @@
 import { storiesOf } from '@storybook/html';
 
-storiesOf('Button', module)
-  .add('Ionic Buttons', () => `
-    <!-- Default -->
+storiesOf('Ionic Buttons', module)
+  .add('Default', () => `
     <ion-button>Default</ion-button>
-
-    <!-- Anchor -->
+  `)
+  .add('Anchor', () => `
     <ion-button href="#">Anchor</ion-button>
-
-    <!-- Colors -->
+  `)
+  .add('Colors', () => `
     <ion-button color="primary">Primary</ion-button>
     <ion-button color="secondary">Secondary</ion-button>
     <ion-button color="tertiary">Tertiary</ion-button>
@@ -18,41 +17,34 @@ storiesOf('Button', module)
     <ion-button color="light">Light</ion-button>
     <ion-button color="medium">Medium</ion-button>
     <ion-button color="dark">Dark</ion-button>
-
-    <!-- Expand -->
+  `)
+  .add('Expand', () => `
     <ion-button expand="full">Full Button</ion-button>
     <ion-button expand="block">Block Button</ion-button>
-
-    <!-- Round -->
+  `)
+  .add('Round', () => `
     <ion-button shape="round">Round Button</ion-button>
-
-    <!-- Fill -->
+  `)
+  .add('Fill', () => `
     <ion-button expand="full" fill="outline">Outline + Full</ion-button>
     <ion-button expand="block" fill="outline">Outline + Block</ion-button>
     <ion-button shape="round" fill="outline">Outline + Round</ion-button>
-
-    <!-- Icons -->
+  `)
+  .add('Icons', () => `
     <ion-button>
       <ion-icon slot="start" name="star"></ion-icon>
       Left Icon
     </ion-button>
-
     <ion-button>
       Right Icon
       <ion-icon slot="end" name="star"></ion-icon>
     </ion-button>
-
     <ion-button>
       <ion-icon slot="icon-only" name="star"></ion-icon>
     </ion-button>
-
-    <!-- Sizes -->
+  `)
+  .add('Sizes', () => `
     <ion-button size="large">Large</ion-button>
     <ion-button>Default</ion-button>
     <ion-button size="small">Small</ion-button>
   `)
-  .add('with emoji', () => {
-    const button = document.createElement('button');
-    button.innerText = '😀 😎 👍 💯';
-    return button;
-  });
