@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = async ({ config, mode }) => {
 
   config.module.rules.push({
-    test: /-story(-(angular|react|vue))?\.[jt]s?$/,
+    test: /-story.js/,
     use: [
       {
         loader: require.resolve('@storybook/addon-storysource/loader'),
