@@ -1,4 +1,12 @@
-import { configure } from '@storybook/html';
+import { configure, addDecorator } from '@storybook/html';
+
+const CenterDecorator = (storyFn) => {
+  return `<div style="margin: 2%;">
+      ${storyFn()}
+    </div>`;
+}
+
+addDecorator(CenterDecorator)
 
 function loadStories() {
   require('../stories/button-story.js');
