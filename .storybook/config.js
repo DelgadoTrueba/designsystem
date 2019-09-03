@@ -11,6 +11,7 @@ addDecorator(CenterDecorator)
 function loadStories() {
   require('../stories/button-story.js');
   require('../src/tooltip/tooltip-story.js');
+  require('../src/modal/modal-story.js');
   // You can require as many stories as you need.
 }
 
