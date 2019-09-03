@@ -1,4 +1,7 @@
 import { configure, addDecorator } from '@storybook/html';
+import { setOptions } from "@storybook/addon-options";
+
+import { version } from "../package.json";
 
 const CenterDecorator = (storyFn) => {
   return `<div style="margin: 2%;">
@@ -16,3 +19,10 @@ function loadStories() {
 }
 
 configure(loadStories, module);
+
+setOptions({
+  showAddonPanel: false,
+  name: `Delgado Trueba Design System v${version}`,
+  url: "https://google.com",
+  sidebarAnimations: false
+});
